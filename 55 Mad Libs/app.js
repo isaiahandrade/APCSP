@@ -3,7 +3,7 @@ let inputDivUI
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  background('lightgray')
+  background('yellow')
 
   addInputOutputElements()
 
