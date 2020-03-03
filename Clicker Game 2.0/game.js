@@ -18,6 +18,7 @@ let slider;
 function setup() {
   // Setup Canvas
   createCanvas(windowWidth, windowHeight)
+  background('blue')
 
   bananaImg = createImg('https://mycodingclass.co/wp-content/uploads/2020/02/banana-300x150.png', 'banana image');
     bananaImg.size(200,100);
@@ -28,7 +29,7 @@ function setup() {
 
   // Setup Lives Display
   livesDisplay = createElement('h4', 'LIVES: ' + lives)
-  livesDisplay.position(width / 20, height / 14)
+  livesDisplay.position(width / 20, height / 14).id('lives-display')
 
   scoreDisplay = createElement('h4', 'SCORE: ' + score)
   scoreDisplay.position(width / 20, height / 18)
@@ -36,9 +37,10 @@ function setup() {
 
   // Creates Difficulty Slider
   const difficultyLabel = createElement('h4', 'DIFFICULTY')
+  difficultyLabel.position(width/8, height/15)
   frameRate(1);
   slider = createSlider(1, 15, 1);
- 
+ slider.position(width / 8, height / 9)
   slider.style('width', '80px');
 
 
