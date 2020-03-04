@@ -1,5 +1,5 @@
 // Initialize UI Elements
-let bananaImg
+let beetlejuiceImg
 let scoreDisplay
 let livesDisplay
 let difficultySlider
@@ -20,10 +20,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
   background('blue')
 
-  bananaImg = createImg('https://mycodingclass.co/wp-content/uploads/2020/02/banana-300x150.png', 'banana image');
-    bananaImg.size(200,100);
+  beetlejuiceImg = createImg('beetlejuice.png', 'beetlejuice image');
+  beetlejuiceImg.size(200,100);
   
-    heading = createElement('h2', 'Click the Banana!')
+    heading = createElement('h2', 'Click Beetlejuice!')
     heading.position(width / 3, height / 4);
   
 
@@ -54,9 +54,9 @@ function draw() {
  frameRate(val);
 
   // Randomly Position Banana
-  bananaImg.position(random(width), random(height))
+  beetlejuiceImg.position(random(width), random(height))
  
-  bananaImg.mousePressed(increaseScore)
+  beetlejuiceImg.mousePressed(increaseScore)
 
   checkLose()
   checkWin()
@@ -64,7 +64,7 @@ function draw() {
 }
 
 function mousePressed() {
-  if (dist(mouseX, mouseY, bananaImg.x, bananaImg.y) > 400) {
+  if (dist(mouseX, mouseY, beetlejuiceImg.x, beetlejuiceImg.y) > 100) {
     decreaseLives()
   }
  
